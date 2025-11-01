@@ -1,0 +1,334 @@
+/* ReviewModal.module.css */
+
+.modalOverlay {
+  position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.modalContainer {
+  background: #181818;
+    border-radius: 10px;
+    width: 550px;
+    max-width: 95vw;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    position: relative;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 확인 모달 스타일 */
+.confirmModal {
+  background: #181818;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Pretendard', sans-serif;
+  text-align: center;
+}
+
+.confirmModal h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.confirmModal p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.closeModalButton {
+  background: #393943;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.closeModalButton:hover {
+  background: #4a4a54;
+}
+
+.confirmButton {
+  background: #FFD600;
+  color: #232328;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.confirmButton:hover {
+  background: #FFE44D;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.header {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star {
+  color: #FFD600;
+    font-size: 1.1rem;
+    margin-left: 8px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+.closeBtn {
+  background: none;
+    border: none;
+    color: #aaa;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #393943;
+  margin: 16px 0 16px 0;
+  border: none;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 250px;
+  background: #181818;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 350;
+  font-family: 'Pretendard', sans-serif;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.textarea::placeholder {
+  color: #666;
+}
+
+/*.textarea:focus {
+  background: #1f1f1f;
+}*/
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.starInputRow {
+  margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    justify-content: flex-start;
+    margin-right: auto;
+}
+
+.starInputLabel {
+  color: #aaa;
+    font-size: 0.95rem;
+    margin-right: 8px;
+}
+
+.starInputIcons {
+  display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.starIcon {
+  width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.starIcon:hover {
+  transform: scale(1.1);
+}
+
+.starIcon.disabled {
+  cursor: not-allowed;
+}
+
+.loadingText {
+   color: #aaa;
+    font-size: 0.9rem;
+    margin-left: 8px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.length {
+  color: #aaa;
+    font-size: 0.95rem;
+}
+
+.saveBtn {
+  background: #FFD600;
+  color: #232328;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 30%;
+  height: 40px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/*.saveBtn:hover:not(:disabled) {
+  background: #e0255f;
+  transform: translateY(-1px);
+}*/
+
+.saveBtn:disabled {
+  background: #555;
+    color: #aaa;
+    cursor: default;
+}
+
+/* 스포일러 토글 스타일 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #393943;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff2f6e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .modalContainer {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .confirmModal {
+    width: 90%;
+    margin: 20px;
+  }
+  
+  .header {
+    padding: 20px 20px 12px 20px;
+  }
+  
+  .textarea {
+    padding: 16px 20px;
+  }
+  
+  .footer {
+    padding: 12px 20px 20px 20px;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .closeModalButton,
+  .confirmButton {
+    width: 100%;
+  }
+} 

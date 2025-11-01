@@ -1,0 +1,400 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: none;
+    min-height: 100vh;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #b0b8c1;
+}
+
+.error {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    background: #222;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.formRow .formGroup {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* 이미지 업로드 섹션 스타일 */
+.imageSection {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.imageSection h3 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.uploadMethod {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.uploadMethod label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.uploadMethod input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.fileUpload {
+    margin-bottom: 15px;
+}
+
+.fileUpload input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #555;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fileUpload input[type="file"]:hover {
+    border-color: #4a90e2;
+}
+
+.urlInput {
+    margin-bottom: 15px;
+}
+
+.urlInput input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.urlInputs {
+    margin-bottom: 15px;
+}
+
+.urlInputRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.urlInputRow input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.removeButton {
+    padding: 8px 12px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.removeButton:hover {
+    background: #c0392b;
+}
+
+.addButton {
+    padding: 8px 16px;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.addButton:hover {
+    background: #229954;
+}
+
+.uploadButton {
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.uploadButton:hover {
+    background: #357abd;
+}
+
+.uploadButton:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+/* 기존 스틸컷 표시 스타일 */
+.existingStillcuts {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+.existingStillcuts h4 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.stillcutGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.stillcutItem {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #555;
+    transition: border-color 0.2s ease;
+}
+
+.stillcutItem:hover {
+    border-color: #4a90e2;
+}
+
+.stillcutItem img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.stillcutActions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.stillcutItem:hover .stillcutActions {
+    opacity: 1;
+}
+
+.stillcutActions .removeButton {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    background: rgba(231, 76, 60, 0.9);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.stillcutActions .removeButton:hover {
+    background: rgba(231, 76, 60, 1);
+}
+
+.preview {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+.previewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.previewGrid .preview {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.cancelButton,
+.submitButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.cancelButton {
+    background: #666;
+    color: #fff;
+}
+
+.cancelButton:hover {
+    background: #555;
+}
+
+.submitButton {
+    background: #4a90e2;
+    color: #fff;
+}
+
+.submitButton:hover {
+    background: #357abd;
+}
+
+.submitButton:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+    }
+
+    .cancelButton,
+    .submitButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+} 

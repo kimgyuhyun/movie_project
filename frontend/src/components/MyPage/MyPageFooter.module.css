@@ -1,0 +1,488 @@
+.footer {
+  background: var(--color-bg);
+  min-height: 100vh;
+  color: #fff;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+/* 모달 오버레이 */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 확인 모달 스타일 */
+.confirmModal {
+  background: #181818;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Pretendard', sans-serif;
+  text-align: center;
+}
+
+.confirmModal h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.confirmModal p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.closeModalButton {
+  background: #393943;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.closeModalButton:hover {
+  background: #4a4a54;
+}
+
+.confirmButton {
+  background: #ff2f6e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.confirmButton:hover {
+  background: #e0255f;
+}
+
+.commentCard {
+  width: 400px;
+  min-width: 220px;
+  background: #292929;
+  border-radius: 14px;
+  padding: 18px 18px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  margin-bottom: 6px;
+  font-family: 'Pretendard', sans-serif;
+  cursor: default;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  cursor: default;
+}
+
+.commentUser {
+  color: #aaa;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.commentRating {
+  color: #FFD600;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.commentDivider {
+  width: 100%;
+  height: 1px;
+  background: #393943;
+  margin: 8px 0 12px 0;
+  border: none;
+}
+
+.commentContent {
+  color: #aaa;
+  font-size: 1.08rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  word-break: keep-all;
+  min-height: 60px;
+}
+
+.commentContentWrap {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.commentFooterDivider {
+  width: 100%;
+  height: 1px;
+  background: #393943;
+  margin: 8px 0 8px 0;
+  border: none;
+}
+
+.commentFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #aaa;
+  font-size: 0.98rem;
+}
+
+.commentFooterLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.commentCountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.commentFooter span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.commentDate {
+  color: #aaa;
+  font-size: 0.92rem;
+  text-align: left;
+  margin-left: 0;
+  font-weight: 400;
+}
+
+
+
+.commentIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+
+.commentSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 70px 8px 0px;
+}
+
+.commentSectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 16px 0 12px 70px;
+  letter-spacing: -1px;
+}
+
+.commentSectionMore {
+  color: #aaa;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: color 0.2s;
+
+}
+
+.commentSectionMore:hover {
+  color: #fff;
+}
+
+.commentGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 8px;
+  margin-left: 70px;
+}
+
+.commentMovieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 25%;
+}
+
+.commentMovieTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #aaa;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}
+
+.commentMoviePoster {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+  width: 93%;
+  border: none;
+  border-top: 1.5px solid #2c323a;
+  margin: 40px auto 0 auto;
+}
+
+.emptyMessage {
+  text-align: left;
+  color: #bbb;
+  font-size: 1.2rem;
+  margin: 32px 0 32px 15px;
+}
+
+.commentActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.replyEditBtn {
+  background: #393943;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.replyEditBtn:hover {
+  background: #4a4a54;
+}
+
+.replyDeleteBtn {
+  background: #ff2f6e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.replyDeleteBtn:hover {
+  background: #e0255f;
+}
+
+.profileImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .commentSectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .commentSectionHeader {
+    margin: 24px 40px 8px 0px;
+  }
+
+  .commentGrid {
+    margin-left: 40px;
+  }
+
+  .commentCard {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .commentSectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .commentSectionHeader {
+    margin: 24px 20px 8px 0px;
+  }
+
+  .commentGrid {
+    margin-left: 20px;
+  }
+
+  .commentCard {
+    width: 300px;
+  }
+
+  .commentUser,
+  .commentRating {
+    font-size: 1rem;
+  }
+
+  .commentContent {
+    font-size: 1rem;
+  }
+
+  .commentContent:focus,
+  .commentContent:focus-visible,
+  .commentContent:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .commentFooter {
+    font-size: 0.9rem;
+  }
+
+  .commentIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .commentMovieInfo {
+    width: 30%;
+  }
+
+  .commentMoviePoster {
+    width: 70px;
+    height: 100px;
+  }
+
+  .commentMovieTitle {
+    font-size: 0.7rem;
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .commentSectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .commentSectionHeader {
+    margin: 24px 10px 8px 0px;
+  }
+
+  .commentGrid {
+    margin-left: 10px;
+  }
+
+  .commentCard {
+    width: 280px;
+  }
+
+  .commentUser,
+  .commentRating {
+    font-size: 0.9rem;
+  }
+
+  .commentContent {
+    font-size: 0.9rem;
+  }
+
+  .commentFooter {
+    font-size: 0.8rem;
+  }
+
+  .commentIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .commentIconRow {
+    gap: 12px;
+  }
+
+  .commentMovieInfo {
+    width: 35%;
+  }
+
+  .commentMoviePoster {
+    width: 60px;
+    height: 80px;
+  }
+
+  .commentMovieTitle {
+    font-size: 0.6rem;
+    max-width: 60px;
+  }
+
+  .replyEditBtn,
+  .replyDeleteBtn {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+
+  .profileImage {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .confirmModal {
+    width: 90%;
+    margin: 20px;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .closeModalButton,
+  .confirmButton {
+    width: 100%;
+  }
+}

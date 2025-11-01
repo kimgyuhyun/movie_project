@@ -1,0 +1,532 @@
+.overlay {
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.modal {
+  background: #181818;
+    border-radius: 10px;
+    width: 550px;
+    height: 90%;
+    max-width: 95vw;
+    padding: 12px 24px 12px 24px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 모달 오버레이 (삭제 확인용) */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 확인 모달 스타일 */
+.confirmModal {
+  background: #181818;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Pretendard', sans-serif;
+  text-align: center;
+}
+
+.confirmModal h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.confirmModal p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.closeModalButton {
+  background: #393943;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.closeModalButton:hover {
+  background: #4a4a54;
+}
+
+.confirmButton {
+  background: #ff2f6e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.confirmButton:hover {
+  background: #e0255f;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.movieTitle {
+  color: #cccccc;
+  font-size: 16px;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+    border: none;
+    color: #aaa;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10;
+    padding: 0 10px;
+}
+
+.closeButton:hover {
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+    height: 1px;
+    background: #393943;
+    margin: 8px 0 12px 0;
+    border: none;
+}
+
+/* 로그인 안내 메시지 */
+.loginNotice {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin: 16px 24px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.loginNotice p {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 댓글 섹션 */
+
+
+/* 영화 정보 및 원본 리뷰 */
+.reviewSection {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 20px;
+}
+
+.moviePoster {
+  flex-shrink: 0;
+}
+
+.moviePoster img {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #333333;
+}
+
+.reviewInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviewInfo .movieTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.reviewContent {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.commentsHeader {
+  margin-bottom: 16px;
+}
+
+.commentsCount {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.loading, .error, .noComments {
+  text-align: center;
+  padding: 40px 20px;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* 댓글 목록 */
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-right: 30px;
+}
+
+.commentItem {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #333;
+  padding: 18px 0 18px 0;
+  background: #181818;
+  margin: 0;
+  border-radius: 0;
+  color: #eee;
+}
+
+.replyItem {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #333;
+  padding: 18px 0 12px 0;
+  background: #181818;
+  margin: 0;
+  border-radius: 0;
+  padding-left: 32px;
+  border-left: 2px solid #2196f3;
+  color: #eee;
+}
+
+.commentHeaderLine {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: #eee;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.replySection {
+  margin-top: 8px;
+  padding-left: 0;
+  border-left: 0;
+}
+
+.profileImage {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #333;
+}
+
+.commentContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.commentText {
+  color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.timestamp {
+  color: #aaa;
+  font-size: 12px;
+  margin-left: 8px;
+}
+.editButton {
+  background: #222;
+  color: #aaa;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-left: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.editBtn:hover {
+  background: #FFD600;
+  color: #222;
+}
+
+.deleteButton {
+  background: #222;
+  color: #ff4d4f;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-left: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.deleteButton:hover {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.replyButton{
+  border: none;
+  background: none;
+  color: #aaa;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.replyButton:hover{
+  color: #fff;
+  background: #2a2a2a;
+}
+
+/* 비활성화된 버튼 스타일 */
+.replyButton.disabled, .likeButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.replyButton.disabled:hover, .likeButton.disabled:hover {
+  color: #aaa;
+  background: none;
+}
+
+.likeButton {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.likeButton:hover {
+  color: #fff;
+}
+.likeIcon {
+  width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.replyIcon{
+width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.likeCount {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.replyTextarea, .editTextarea {
+  width: 100%;
+  min-height: 48px;
+  font-size: 15px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #181818;
+  color: #eee;
+  margin-top: 6px;
+  padding: 8px 10px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.replyTextarea:focus, .editTextarea:focus {
+  width: 100%;
+  min-height: 48px;
+  font-size: 15px;
+  border: 1px solid #333 !important;
+  border-radius: 6px;
+  background: #181818;
+  color: #eee;
+  margin-top: 6px;
+  padding: 8px 10px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.saveButton {
+  background: #2196f3;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-right: 4px;
+  font-size: 13px;
+}
+.saveButton:hover {
+  background: #1565c0;
+}
+.cancelButton {
+  background: #333;
+  color: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+.cancelButton:hover {
+  background: #444;
+}
+.editButtons, .replyButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.replyTo {
+  color: #2196f3;
+  font-weight: 600;
+  margin-right: 4px;
+  font-size: 15px;
+}
+
+/* 스크롤바 스타일링 */
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 3px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .header {
+    padding: 20px 20px 12px 20px;
+  }
+  
+  .originalReview {
+    padding: 16px 20px;
+  }
+  
+  .commentsSection {
+    padding: 0 20px 20px 20px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .movieTitle {
+    font-size: 14px;
+  }
+  .replyItem {
+    padding-left: 16px;
+  }
+  .profileImage {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+  .commentText {
+    font-size: 14px;
+  }
+  .replyTo {
+    font-size: 14px;
+  }
+} 
